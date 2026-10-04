@@ -1,0 +1,6 @@
+#ifndef AUDIO_PROFILES
+#define AUDIO_PROFILES_BASS
+#define AUDIO_PROFILES_MEDIUM
+#define AUDIO_PROFILES_VOCALr
+
+#endif 
