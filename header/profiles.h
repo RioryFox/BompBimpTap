@@ -1,7 +1,7 @@
-#define AUDIO_PROFILES
-#define AUDIO_PROFILES_BASS
-#define AUDIO_PROFILES_MEDIUM
-#define AUDIO_PROFILES_VOCAL
+//#define AUDIO_PROFILES
+//#define AUDIO_PROFILES_BASS
+//#define AUDIO_PROFILES_MEDIUM
+//#define AUDIO_PROFILES_VOCAL
 
 struct AudioSpeaker {
         wchar_t min_Hz; //wchar_t взят потому что слух человека работает от 20Гц до 20 000Гц, а тут до 65535 можно хранить
