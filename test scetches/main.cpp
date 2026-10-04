@@ -1,4 +1,4 @@
-#include <Arduin.h>
+#include <Arduino.h>
 
 void setup() {
   Serial.begin(9600); // Initialize UART at 9600 baud rate
