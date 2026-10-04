@@ -1,15 +1,8 @@
-int main (void) {
-        //char input[64] = {0};
-        //uart_init(115200);
+void setup() {
+  Serial.begin(9600); // Initialize UART at 9600 baud rate
+}
 
-        //while (1){
-        //        uart_write("\r\n Bimp!\r\n");
-        //        aurt_input(input, sizeof(input));
-        //        uart_write("\r\n");
-        //        uart_write(input);
-        //};
-
-        Serial.begin(115200);
-        Serial.println("Hello");
-        delay(1500);
-};
+void loop() {
+  Serial.println("UART says Hi!"); // Send message
+  delay(1000); // Wait for 1 second
+}
