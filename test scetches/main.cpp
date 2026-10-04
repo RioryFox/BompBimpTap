@@ -1,10 +1,10 @@
 #include <Arduino.h>
 
 void setup() {
-  Serial.begin(9600); // Initialize UART at 9600 baud rate
+  Serial.begin(9600);
 }
 
 void loop() {
-  Serial.println("UART says Hi!"); // Send message
-  delay(1000); // Wait for 1 second
+  Serial.println("UART says Hi!");
+  delay(1000);
 }
