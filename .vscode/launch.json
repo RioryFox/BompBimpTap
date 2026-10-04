@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/rioryfox/BompBimpTamp/header",
-      "program": "/home/rioryfox/BompBimpTamp/header/build/Debug/outDebug",
+      "cwd": "/home/rioryfox/BompBimpTamp/test scetches",
+      "program": "/home/rioryfox/BompBimpTamp/test scetches/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
