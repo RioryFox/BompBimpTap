@@ -1,7 +1,16 @@
-int main (void) {
-        uart_init(115200);
+#define PARTS_COUNT
 
-        uart_write("\r\n Bimp!\r\n");
-        aurt_input(input, sizeof(input));
-        uart_write("\r\n", input)
-}
+class dinamic {
+        public:
+                int *parts [PARTS_COUNT];
+                int count(int got_sound, int dinamic_sound) {
+                        int result = (got_sound - dinamic_sound);
+                        return result
+                };
+};
+
+class groupOfDinamic {
+        public:
+                char name[1];
+                
+};
