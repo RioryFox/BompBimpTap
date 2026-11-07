@@ -1,12 +1,13 @@
 #include <Arduino.h>
-#include "stm32f4xx_hal.h"
+#include "stm32h7xx_hal.h"
 #include "../../header/profiles.h"
 //#include "../../header/components.h"
 
 
+I2S_HandleTypeDef hi2s2 = {};
+
 void setup() {
     Serial.begin(115200);
-
     // Включаем тактирование GPIOB и SPI2
     __HAL_RCC_GPIOB_CLK_ENABLE();
     __HAL_RCC_SPI2_CLK_ENABLE();
