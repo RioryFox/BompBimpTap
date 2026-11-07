@@ -3,8 +3,6 @@
 #include <Arduino.h>
 #include "stm32f4xx_hal.h"
 
-I2S_HandleTypeDef hi2s2 = {};
-uint16_t audioBuffer[64];
 
 void setup() {
     Serial.begin(115200);
@@ -50,9 +48,9 @@ void loop() {
 
     if (status == HAL_OK) {
         Serial.print("Raw: ");
-        Serial.print(audioBuffer[0]);
+        Serial.print(audioBuffer[0], HEX);
         Serial.print(" ");
-        Serial.println(audioBuffer[1]);
+        Serial.println(audioBuffer[1]. HEX);
     } else {
         Serial.print("RX error: ");
         Serial.println((int)status);
