@@ -1,7 +1,7 @@
-#include "../../header/profiles.h"
-#include "../../header/components.h"
 #include <Arduino.h>
 #include "stm32f4xx_hal.h"
+#include "../../header/profiles.h"
+//#include "../../header/components.h"
 
 
 void setup() {
@@ -29,8 +29,8 @@ void setup() {
     hi2s2.Init.MCLKOutput = I2S_MCLKOUTPUT_DISABLE;
     hi2s2.Init.AudioFreq = I2S_AUDIOFREQ_96K;
     hi2s2.Init.CPOL = I2S_CPOL_LOW;
-    hi2s2.Init.ClockSource = I2S_CLOCK_PLL;
-    hi2s2.Init.FullDuplexMode = I2S_FULLDUPLEXMODE_DISABLE;
+    //hi2s2.Init.ClockSource = I2S_CLOCK_PLL;
+    //hi2s2.Init.FullDuplexMode = I2S_FULLDUPLEXMODE_DISABLE;
 
     if (HAL_I2S_Init(&hi2s2) != HAL_OK) {
         Serial.println("I2S INIT ERROR");
@@ -41,7 +41,7 @@ void setup() {
 void loop() {
     HAL_StatusTypeDef status = HAL_I2S_Receive(
         &hi2s2,
-        audioBuffer,
+        reinterpret_cast<uint16_t*>(audioBuffer),
         32,
         100
     );
@@ -50,7 +50,7 @@ void loop() {
         Serial.print("Raw: ");
         Serial.print(audioBuffer[0], HEX);
         Serial.print(" ");
-        Serial.println(audioBuffer[1]. HEX);
+        Serial.println(audioBuffer[1], HEX);
     } else {
         Serial.print("RX error: ");
         Serial.println((int)status);
