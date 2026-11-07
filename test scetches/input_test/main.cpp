@@ -12,9 +12,9 @@ void setup() {
     __HAL_RCC_GPIOB_CLK_ENABLE();
     __HAL_RCC_SPI2_CLK_ENABLE();
 
-    // PB12 = LRCK, PB13 = BICK, PB15 = DATA
+    // PB12 = LRCK, PB13 = BICK, PB14 = DATA
     GPIO_InitTypeDef gpio = {};
-    gpio.Pin = GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_15;
+    gpio.Pin = GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14;
     gpio.Mode = GPIO_MODE_AF_PP;
     gpio.Pull = GPIO_NOPULL;
     gpio.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
